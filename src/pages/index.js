@@ -18,7 +18,7 @@ const IndexPage = () => (
           <li>
             <Scroll type="id" element="one">
               <a href="/#" className="button primary">
-                Explore
+                O nas
               </a>
             </Scroll>
           </li>
@@ -26,7 +26,7 @@ const IndexPage = () => (
       </div>
       <Scroll type="id" element="one">
         <a href="#one" className="more">
-          Learn More
+          Więcej
         </a>
       </Scroll>
     </section>
@@ -49,7 +49,7 @@ const IndexPage = () => (
         </header>
         <ul className="icons major">
           <li>
-            <span className="icon fa-gem major style1">
+            <span className="icon fa-gem major style2">
               <span className="label">Lorem</span>
             </span>
           </li>
@@ -59,7 +59,7 @@ const IndexPage = () => (
             </span>
           </li>
           <li>
-            <span className="icon solid fa-code major style3">
+            <span className="icon solid fa-code major style2">
               <span className="label">Dolor</span>
             </span>
           </li>

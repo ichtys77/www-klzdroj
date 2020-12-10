@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Gatsby Starter Spectral', // <title>
+  siteTitle: 'Koło Łowieckie ZDRÓJ', // <title>
   manifestName: 'Spectral',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',
@@ -9,7 +9,7 @@ module.exports = {
   manifestIcon: 'src/assets/img/website-icon.png',
   pathPrefix: `/gatsby-starter-spectral/`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'KŁ "ZDRÓJ" ZANIEMYŚL',
-  subHeading: 'Full time Web Developer. Part time Open source contributor  ',
+  subHeading: 'Witamy na stronie internetowej naszego koła. Darz Bór!  ',
   // social
   socialLinks: [
     {
