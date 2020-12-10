@@ -18,15 +18,15 @@ const IndexPage = () => (
           <li>
             <Scroll type="id" element="one">
               <a href="/#" className="button primary">
-                O nas
+                Aktualności
               </a>
             </Scroll>
           </li>
         </ul>
       </div>
-      <Scroll type="id" element="one">
-        <a href="#one" className="more">
-          Więcej
+      <Scroll type="id" element="cta">
+        <a href="#cta" className="more">
+          Kontakt
         </a>
       </Scroll>
     </section>
