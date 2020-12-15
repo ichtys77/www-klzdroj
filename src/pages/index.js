@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 
 import Scroll from '../components/Scroll';
@@ -8,7 +8,7 @@ import pic1 from '../assets/images/pic01.jpg';
 import pic2 from '../assets/images/pic02.jpg';
 import pic3 from '../assets/images/pic03.jpg';
 import config from '../../config';
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
     <section id="banner">
       <div className="inner">
@@ -16,7 +16,7 @@ const IndexPage = () => (
         <p>{config.subHeading}</p>
         <ul className="actions special">
           <li>
-            <Scroll type="id" element="one">
+            <Scroll type="id" element="blog">
               <a href="/#" className="button primary">
                 Aktualności
               </a>
@@ -29,6 +29,28 @@ const IndexPage = () => (
           Kontakt
         </a>
       </Scroll>
+    </section>
+
+    <section id="blog" className="wrapper style3 special">
+      <div className="inner">
+        <header className="major">
+          <h2>
+            Aktualności
+          </h2>
+        </header>
+        <div>
+        {data.allWpPost.nodes.map((node) => (
+        <div key={node.slug}>
+          {/* highlight-start */}
+          <Link to={node.slug}>
+            <p>{node.title}</p>
+          </Link>
+          {/* highlight-end */}
+          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+        </div>
+        ))}
+        </div>
+      </div>
     </section>
 
     <section id="one" className="wrapper style1 special">
@@ -204,3 +226,16 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    allWpPost(sort: { fields: [date], order: DESC }) {
+      nodes {
+        title
+        excerpt
+        slug
+        date
+      }
+    }
+  }
+`
