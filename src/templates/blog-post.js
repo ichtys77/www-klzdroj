@@ -6,13 +6,23 @@ export default function BlogPost({ data }) {
   const post = data.allWpPost.nodes[0]
   console.log(post)
   return (
-    <Layout>
-      <div>
-        <h1>{post.title}</h1>
-        <h2>{post.date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-      </div>
-    </Layout>
+    <Layout fullMenu>
+    <article id="main">
+      <header>
+        <h2>Aktualności</h2>
+        <p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
+      </header>
+      <section className="wrapper style5">
+        <div class="inner">
+          <header>
+            <h4>{post.title}</h4>
+            <p>{post.date}</p>
+          </header>
+          <p className="inner" dangerouslySetInnerHTML={{ __html: post.content }} />
+        </div>
+      </section>
+    </article>
+  </Layout>
   )
 }
 export const query = graphql`

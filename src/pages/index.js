@@ -43,7 +43,7 @@ const IndexPage = ({data}) => (
         <div key={node.slug}>
           {/* highlight-start */}
           <Link to={node.slug}>
-            <p>{node.title}</p>
+            <h4>{node.title}</h4>
           </Link>
           {/* highlight-end */}
           <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
